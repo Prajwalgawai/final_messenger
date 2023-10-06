@@ -2,6 +2,10 @@
 import jwt from 'jsonwebtoken';
 import nodemailer from 'nodemailer';
 import * as math from 'mathjs';
+import dotenv from 'dotenv';
+dotenv.config({
+     path : 'backend/config/config.env'
+})
 // const {nodemailer}=pkg;
 
 export const  authMiddleware = async(req,res,next) => {
@@ -36,7 +40,7 @@ console.log("otp is "+otp);
             secure:false,
             requireTLS:true,
             auth:{
-                user:"prajwalgawai909@gmail.com",
+                user:process.env.EMAIL,
                 pass:'rdms yfmr gjts zkcr'
             }
           })
