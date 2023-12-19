@@ -38,7 +38,7 @@ npm run socket
 
 ## Pics of the application
 
-<img src="./frontend/public/image/messenger.webp">
-<img src="./frontend/public/image/messenger_otp.png">
 <img src="./frontend/public/image/registration_messenger.png">
+<img src="./frontend/public/image/messenger_otp.png">
+<img src="./frontend/public/image/messenger.webp">
 
