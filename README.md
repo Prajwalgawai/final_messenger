@@ -1,4 +1,4 @@
-# PChat
+# PChat 💬
 
 This app is simillar to facebook messenger which includes Real Time features like- Message, image sending, receiving, deleting, profile updating, Otp Verification, Secure Login, Registration using Jwt, Dark and Light Theme
 
