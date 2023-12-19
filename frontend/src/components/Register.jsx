@@ -34,12 +34,6 @@ const Register = () => {
                ...state,
                [e.target.name] : e.target.value 
           })
-
-
-  
-  
-
-
      }
 
      const fileHendle = e =>{
@@ -52,8 +46,10 @@ const Register = () => {
 
           const reader = new FileReader();
           reader.onload = () => {
-               setLoadImage(reader.result);
-          }
+               // setLoadImage(reader.result);
+               setLoadImage(URL.createObjectURL(e.target.files[0]));          //  for handling video file.
+               console.log(URL.createObjectURL(e.target.files[0]));
+          }    
           reader.readAsDataURL(e.target.files[0]);
           
      }
@@ -142,7 +138,8 @@ const Register = () => {
                <div className='form-group'>
                   <div className='file-image'>
                          <div className='image'>
-     {loadImage ? <img src={loadImage} /> : ''  }                         
+     {/* {loadImage ? <video src={loadImage} /> : ''  }                          */}
+     {loadImage ? <video src={loadImage} controls width="200" height="150" /> : ''}
                          </div>
                <div className='file'>
                <label  style={{color:'#318be3'}} htmlFor='image'>Select Image</label>

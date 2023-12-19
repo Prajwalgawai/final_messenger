@@ -70,7 +70,3 @@ console.log("otp is "+otp);
         }
 
 }
-
-
-
-

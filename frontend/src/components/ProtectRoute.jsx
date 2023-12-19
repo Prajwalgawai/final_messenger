@@ -7,9 +7,5 @@ const ProtectRoute = ({children}) => {//children means messenger which is wrappe
  
      const {authenticate} = useSelector(state=>state.auth);
      return authenticate ? children : <Navigate to="/messenger/login" />     
-
-
- 
 };
-
 export default ProtectRoute;
