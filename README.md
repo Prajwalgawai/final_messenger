@@ -31,7 +31,7 @@ npm start
 
 ## Pics of the application
 
-<img src="/messenger.webp">
+<img src="./frontend/public/image/messenger.webp">
 <img src="https://github.com/Prajwalgawai/StackOverflow_clone/blob/master/client/public/view2.png">
 <img src="https://github.com/Prajwalgawai/StackOverflow_clone/blob/master/client/public/view3.png">
 <img src="https://github.com/Prajwalgawai/StackOverflow_clone/blob/master/client/public/view4.png">
