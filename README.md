@@ -15,13 +15,13 @@ git clone git@github.com:Prajwalgawai/final_messenger.git
 - Install Node.js
 - Open the whole Folder in Vs Code or with Any other IDE
 - Install Dependencies for frontend, backend and socket folder using the below command for each folder.
-- 📌Note that as package.json file of backend present in root directory so run command for backend in root directory.
+- 📌Note that as package.json file of backend present in root directory so run command for backend in root directory of our main folder.
 
 ```
 npm install
 ```
 
-- In root directory run following command to start frontend and backend.
+- In root directory of our main folder run following command to start frontend and backend.
 
 ```
 npm run dev
