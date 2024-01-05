@@ -33,6 +33,11 @@ npm run dev
 npm run socket
 ```
 
+- Now your application is running on localhost
+- Register and then login via two gmail id's now you can see your another person in chat application also with whome you can start chatting.
+- gif & + icon near to sending message are dummy for sending images click on image icon it is functional.
+
+
 ## Pics of the application
 
 <img src="./frontend/public/image/registration_messenger.png">
