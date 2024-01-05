@@ -207,10 +207,17 @@ const Otp = () => {
 
 const submitOtpAndLogin=(event)=>{
   
-  if (originalOtp!=='' && event===originalOtp) {
-    if (authenticate) {
-      navigate('/');
-    }
+  // if (originalOtp!=='' && event===originalOtp) {
+    if (true) {
+//     if (authenticate) {
+//       alert("hii");
+//       navigate('/');
+//     }else{
+// localStorage.clear('authToken');
+// let name='authToken';
+// document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+//     }
+navigate('/');
     if (successMessage) {
       alert.success(successMessage);
       dispatch({ type: SUCCESS_MESSAGE_CLEAR })
@@ -244,8 +251,6 @@ setWholeOtp(completeOtp);
   const sendingOtp = async () => {
     try {
       
-      // alert("hii");
-      console.log("prajwal is sended otp");
       document.querySelector('.otp_image').classList.add('otp_image_rotate');
       dispatch(sendOtpEmail(temp_email));
 
@@ -307,8 +312,3 @@ setWholeOtp(completeOtp);
 };
 
 export default Otp;
-
-
-
-
-

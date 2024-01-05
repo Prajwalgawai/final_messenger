@@ -87,7 +87,7 @@ e.target.style.color="white";
                </div>
 
                <div className='form-group' style={{}}>
-     <span style={{fontSize:'12px'}}><Link to="/messenger/forgot_password">forgot password</Link></span>
+     <span style={{fontSize:'12px'}}><Link to="/messenger/login">forgot password</Link></span>
                </div>  
              
           </form> 

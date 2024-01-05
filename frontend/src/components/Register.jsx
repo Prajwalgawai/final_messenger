@@ -78,19 +78,20 @@ const Register = () => {
           if(authenticate){
                navigate('/messenger/otp');
           }
-          // if(authenticate){
-          //      navigate('/');
-          // }
-          // if(successMessage){
-          //      alert.success(successMessage);
-          //      dispatch({type : SUCCESS_MESSAGE_CLEAR })
-          // }
-          // if(error){
-          //      error.map(err=>alert.error(err));
-          //      dispatch({type : ERROR_CLEAR })
-          // }
+          if(authenticate){
+               navigate('/');
+          }
+          if(successMessage){
+               alert.success(successMessage);
+               dispatch({type : SUCCESS_MESSAGE_CLEAR })
+          }
+          if(error){
+               error.map(err=>alert.error(err));
+               dispatch({type : ERROR_CLEAR })
+          }
 
      },[successMessage,error])
+     
 
 
 //    const  colorInput = document.querySelectorAll('.form-control');
@@ -139,7 +140,7 @@ const Register = () => {
                   <div className='file-image'>
                          <div className='image'>
      {/* {loadImage ? <video src={loadImage} /> : ''  }                          */}
-     {loadImage ? <video src={loadImage} controls width="200" height="150" /> : ''}
+     {loadImage ? <img src={loadImage} controls width="200" height="150" /> : ''}
                          </div>
                <div className='file'>
                <label  style={{color:'#318be3'}} htmlFor='image'>Select Image</label>

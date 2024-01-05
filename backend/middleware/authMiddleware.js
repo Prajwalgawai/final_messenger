@@ -34,36 +34,37 @@ const otp=math.round(math.random()*(9000-1000)+1000);
 console.log("otp is "+otp);
 
      try{
-          const transporter=nodemailer.createTransport({
-            host:"smtp.gmail.com",
-            port:587,
-            secure:false,
-            requireTLS:true,
-            auth:{
-                user:process.env.EMAIL,
-                pass:'rdms yfmr gjts zkcr'
-            }
-          })
+     //      const transporter=nodemailer.createTransport({
+     //        host:"smtp.gmail.com",
+     //        port:587,
+     //        secure:false,
+     //        requireTLS:true,
+     //        auth:{
+     //            user:process.env.EMAIL,
+     //            pass:'rdms yfmr gjts zkcr'
+     //        }
+     //      })
         
-        const options={
-            from:"prajwalgawai909@gmail.com",
-            to:email,
-            subject:'For verification of '+email,
-            html:"<p>Your One Time Password(OTP) is</p>"+otp
-        }
+     //    const options={
+     //        from:process.env.EMAIL,
+     //        to:email,
+     //        subject:'For verification of '+email,
+     //        html:"<p>Your One Time Password(OTP) is</p>"+otp
+     //    }
         
-        transporter.sendMail(options, function(err, content){
-          if(err){
-            console.log(err);
+     //    transporter.sendMail(options, function(err, content){
+     //      if(err){
+     //        console.log(err);
         
-            }else{
-               res.status(201).json({
-                    otp,
-                    status:'OTP_SEND_SUCCESS'
-               })
-          //     console.log("successfully send an email Wait to complete varification");
-            }
-          });
+     //        }else{
+     //           res.status(201).json({
+     //                otp,
+     //                status:'OTP_SEND_SUCCESS'
+     //           })
+     //      //     console.log("successfully send an email Wait to complete varification");
+     //        }
+     //      });
+     
         }
         catch(err){
       console.log(err);
