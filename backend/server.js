@@ -17,7 +17,7 @@ dotenv.config({
 })
 
 app.use(cors({
-     origin: '*', // Allow specific origins
+     origin: ['http://localhost:3000', 'https://poetic-lamington-0c32de.netlify.app'], // Allow specific origins
      methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
      credentials: true, // Allow cookies if needed
  }));

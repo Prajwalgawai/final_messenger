@@ -1,7 +1,8 @@
 import axios from 'axios';
 import {FRIEND_GET_SUCCESS,MESSAGE_GET_SUCCESS,MESSAGE_SEND_SUCCESS,THEME_GET_SUCCESS,THEME_SET_SUCCESS,DELETE_MINE_MSG_SUCCESS,DELETE_MINE_MSG_FAILED,DELETE_BOTH_MSG_SUCCESS,DELETE_BOTH_MSG_FAILED} from "../types/messengerType";
 
-const API=axios.create({baseURL:'http://localhost:4000'});
+const API=axios.create({baseURL:'https://final-messenger-2.onrender.com'});
+
 // https://final-messenger-2.onrender.com
 
 export const getFriends = () => async(dispatch) => {
@@ -10,7 +11,7 @@ export const getFriends = () => async(dispatch) => {
            dispatch({
                 type: FRIEND_GET_SUCCESS,
                 payload : {
-                     friends : response.data.friends
+                     friends : response.data.friends   
                 }
            })
 

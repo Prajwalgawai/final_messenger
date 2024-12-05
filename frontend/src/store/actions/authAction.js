@@ -2,7 +2,7 @@ import axios from 'axios';
 import {REGISTER_FAIL,REGISTER_SUCCESS,USER_LOGIN_SUCCESS,USER_LOGIN_FAIL,PROFILE_CHANGE_SUCCESS,PROFILE_CHANGE_FAIL,PROFILE_IMG_CHANGE,OTP_SENT} from "../types/authType";
 import {getFriends} from "./messengerAction.js";
 
-const API=axios.create({baseURL:'http://localhost:4000'});
+const API=axios.create({baseURL:'https://final-messenger-2.onrender.com'});
 
 export const userRegister = (data) => {
      return async (dispatch) => {
@@ -10,7 +10,8 @@ export const userRegister = (data) => {
           const config = {
                headers: {
                 'Content-Type': 'multipart/form-data'
-               } 
+               } ,
+               withCredentials: true, 
           }
           try{
                const response = await API.post('/api/messenger/user-register',data,config);
@@ -42,7 +43,8 @@ export const userLogin = (data) => {
         const config = {
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            withCredentials: true, 
         }
 
         try {
@@ -86,7 +88,8 @@ export const deleteMyAccount=(data)=>async(dispatch)=>{
     const config = {
         headers: {
             'Content-Type': 'application/json'
-        }
+        },
+        withCredentials: true, 
     }
 try{
    
@@ -106,7 +109,8 @@ export const profileImgUpdate=(data)=>async(dispatch)=>{
         const config = {
              headers: {
               'Content-Type': 'multipart/form-data'
-             } 
+             } ,
+             withCredentials: true, 
         }
         try{console.log(data);
          
@@ -147,7 +151,8 @@ export const sendOtpEmail=(data)=>async(dispatch)=>{
     const config = {
         headers: {
             'Content-Type': 'application/json'
-        }
+        },
+        withCredentials: true, 
     }
     console.log("data is"+data);
     try {

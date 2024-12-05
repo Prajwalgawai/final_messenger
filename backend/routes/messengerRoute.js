@@ -4,13 +4,13 @@ import {getFriends,messageUploadDB,messageGet,ImageMessageSend,messageSeen,deliv
 const router=express.Router();
 import { authMiddleware }  from '../middleware/authMiddleware.js';
 
-router.get('/get-friends',authMiddleware, getFriends);
-router.post('/send-message',authMiddleware, messageUploadDB);
-router.get('/get-message/:id',authMiddleware, messageGet);
-router.post('/image-message-send',authMiddleware, ImageMessageSend);
+router.get('/get-friends', getFriends);
+router.post('/send-message', messageUploadDB);
+router.get('/get-message/:id', messageGet);
+router.post('/image-message-send', ImageMessageSend);
 
-router.post('/seen-message',authMiddleware, messageSeen);
-router.post('/delivared-message',authMiddleware, delivaredMessage);
+router.post('/seen-message', messageSeen);
+router.post('/delivared-message', delivaredMessage);
 router.post('/delete-mine-msg', deleteMineMessage);
 router.post('/delete-both-msg', deleteBothMsg);
  
