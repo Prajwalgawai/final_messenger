@@ -498,7 +498,7 @@ res.status(500).json({
 export const messageSeen=async(req, res)=>{               //for showing seen unseen functionality
      const messageId=req.body._id;
      // console.log(req.body);
-console.log(messageId);
+// console.log(messageId);
      await messageModel.findByIdAndUpdate(messageId, {
           status:'seen'
      }).then(()=>{

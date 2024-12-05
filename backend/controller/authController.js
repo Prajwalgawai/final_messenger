@@ -252,9 +252,9 @@ const{
 }=fields
 
 const {image}=files;
-console.log("image is :");
+// console.log("image is :");
 
-console.log(image);
+// console.log(image);
 const error=[]
 
 // console.log("username is"+userName+"email is"+email+"password is"+password);
@@ -325,10 +325,10 @@ if(checkUser){
   })
 }
 else{
-  console.log("here I am line 91");
+  // console.log("here I am line 91");
   fs.copyFile(files.image.filepath, newPath ,async(error)=>{
     if(!error){
-      console.log("here I am line 94");
+      // console.log("here I am line 94");
       const userCreate=await registerModel.create({
         userName:userName,
         email:email,
