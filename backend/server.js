@@ -2,6 +2,7 @@
 import express from "express";
 const app = express();
 import dotenv from 'dotenv';
+import cors from 'cors';  // Import the cors package
 
 import databaseConnect from './config/database.js'
 import authRouter from './routes/authRoute.js'
@@ -9,9 +10,18 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import messengerRoute from './routes/messengerRoute.js';
 
+
+
 dotenv.config({
      path : 'backend/config/config.env'
 })
+
+app.use(cors({
+     origin: '*', // Allow specific origins
+     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
+     credentials: true, // Allow cookies if needed
+ }));
+
 
 app.use(bodyParser.json());
 app.use(cookieParser());
