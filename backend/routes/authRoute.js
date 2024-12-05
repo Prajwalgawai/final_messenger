@@ -16,7 +16,7 @@ import {userRegister,userLogin,userLogout, deleteMyAccount,profileImgChange} fro
 import { authMiddleware,sendOtpEmail } from '../middleware/authMiddleware.js';
  router.post("/user-login", userLogin);       //userLogin is fun'n name therefore using router.post here
  router.post("/user-register", userRegister);
- router.post('/user-logout',authMiddleware,userLogout);
+ router.post('/user-logout',userLogout);    //note: I have removed middleware authMiddleware from here and need to add back
  router.post(`/deleteMyAccount`,deleteMyAccount);
  router.post(`/user-profile_img_update`,profileImgChange);
 router.post('/sendotp', sendOtpEmail);
