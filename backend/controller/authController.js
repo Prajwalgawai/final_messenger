@@ -363,7 +363,7 @@ res.status(201).cookie('authToken', token, options).json({
     }else{
       res.status(500).json({
         error:{
-          errorMessage:["internal server error in authcontroller"]
+          errorMessage:["internal server error in authcontroller"+error]
         }
       })
     }
