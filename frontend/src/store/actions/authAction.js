@@ -2,7 +2,7 @@ import axios from 'axios';
 import {REGISTER_FAIL,REGISTER_SUCCESS,USER_LOGIN_SUCCESS,USER_LOGIN_FAIL,PROFILE_CHANGE_SUCCESS,PROFILE_CHANGE_FAIL,PROFILE_IMG_CHANGE,OTP_SENT} from "../types/authType";
 import {getFriends} from "./messengerAction.js";
 
-const API=axios.create({baseURL:'http://localhost:4000', withCredentials: true,});
+const API=axios.create({baseURL:'https://final-messenger-2.onrender.com', withCredentials: true,});
 // https://final-messenger-2.onrender.com
 
 export const userRegister = (data) => {

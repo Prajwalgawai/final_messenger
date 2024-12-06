@@ -348,7 +348,7 @@ else{
     
       const options = {
         expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
-        
+        httpsOnly:true,
         secure: true,
       
     };    
@@ -433,7 +433,7 @@ if(matchPassword){
 
   const options = {
     expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
-    
+    httpsOnly:true,
     secure: true,
     
 };    
@@ -538,7 +538,7 @@ fs.copyFile(files.iurl.filepath, newPath ,async(error)=>{
 
   const options = {
     expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
-    
+    httpsOnly:true,
     secure: true,
     
 };                                      //milisec
