@@ -350,7 +350,7 @@ else{
         expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
         
         secure: true,
-        sameSite: none
+      
     };    
                                     //milisec
 res.status(201).cookie('authToken', token, options).json({
@@ -363,7 +363,7 @@ res.status(201).cookie('authToken', token, options).json({
     }else{
       res.status(500).json({
         error:{
-          errorMessage:["internal server error in authcontroller"+error]
+          errorMessage:["internal server error in authcontroller"]
         }
       })
     }
@@ -435,7 +435,7 @@ if(matchPassword){
     expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
     
     secure: true,
-    sameSite: none
+    
 };    
   
   //milisec
@@ -540,7 +540,7 @@ fs.copyFile(files.iurl.filepath, newPath ,async(error)=>{
     expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
     
     secure: true,
-    sameSite: none
+    
 };                                      //milisec
 res.status(201).cookie('authToken', token, options).json({
 successMessage:"Your Registration Successful",token
