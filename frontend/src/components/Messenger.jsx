@@ -554,11 +554,16 @@ senderId:currentfriend._id});
                </div> */}
 
                <div className='friends'>
-     {
-          friends && friends.length>0 ? friends.map((fd) => <div onClick={()=> setCurrentFriend(fd.fndInfo)} className={currentfriend._id === fd.fndInfo._id ? 'hover-friend active' : 'hover-friend' }> 
-          <Friends activeUser= {activeUser} myId = {myInfo.id}  friend={fd} />
-          </div> ) : 'No Friend'
-     } 
+               {
+    friends && friends.length > 0 ? friends
+        .filter(fd => fd.fndInfo._id !== myInfo.id) // Exclude the logged-in user
+        .map((fd) => 
+            <div onClick={() => setCurrentFriend(fd.fndInfo)} 
+                className={currentfriend._id === fd.fndInfo._id ? 'hover-friend active' : 'hover-friend' }> 
+                <Friends activeUser={activeUser} myId={myInfo.id} friend={fd} />
+            </div> 
+        ) : 'No Friend'
+}
                     
                     
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {FRIEND_GET_SUCCESS,MESSAGE_GET_SUCCESS,MESSAGE_SEND_SUCCESS,THEME_GET_SUCCESS,THEME_SET_SUCCESS,DELETE_MINE_MSG_SUCCESS,DELETE_MINE_MSG_FAILED,DELETE_BOTH_MSG_SUCCESS,DELETE_BOTH_MSG_FAILED} from "../types/messengerType";
 
-const API=axios.create({baseURL:'https://final-messenger-2.onrender.com'});
+const API=axios.create({baseURL:'https://final-messenger-2.onrender.com',withCredentials: true,});
 
 // https://final-messenger-2.onrender.com
 

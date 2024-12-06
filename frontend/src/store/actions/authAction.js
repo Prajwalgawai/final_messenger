@@ -2,7 +2,8 @@ import axios from 'axios';
 import {REGISTER_FAIL,REGISTER_SUCCESS,USER_LOGIN_SUCCESS,USER_LOGIN_FAIL,PROFILE_CHANGE_SUCCESS,PROFILE_CHANGE_FAIL,PROFILE_IMG_CHANGE,OTP_SENT} from "../types/authType";
 import {getFriends} from "./messengerAction.js";
 
-const API=axios.create({baseURL:'https://final-messenger-2.onrender.com'});
+const API=axios.create({baseURL:'https://final-messenger-2.onrender.com', withCredentials: true,});
+// https://final-messenger-2.onrender.com
 
 export const userRegister = (data) => {
      return async (dispatch) => {
@@ -11,7 +12,7 @@ export const userRegister = (data) => {
                headers: {
                 'Content-Type': 'multipart/form-data'
                } ,
-               withCredentials: true, 
+               credentials:true, 
           }
           try{
                const response = await API.post('/api/messenger/user-register',data,config);
@@ -44,7 +45,7 @@ export const userLogin = (data) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            withCredentials: true, 
+            credentials:true, 
         }
 
         try {
@@ -89,7 +90,7 @@ export const deleteMyAccount=(data)=>async(dispatch)=>{
         headers: {
             'Content-Type': 'application/json'
         },
-        withCredentials: true, 
+        credentials:true, 
     }
 try{
    
@@ -110,7 +111,7 @@ export const profileImgUpdate=(data)=>async(dispatch)=>{
              headers: {
               'Content-Type': 'multipart/form-data'
              } ,
-             withCredentials: true, 
+             credentials:true, 
         }
         try{console.log(data);
          
@@ -152,7 +153,7 @@ export const sendOtpEmail=(data)=>async(dispatch)=>{
         headers: {
             'Content-Type': 'application/json'
         },
-        withCredentials: true, 
+        credentials:true, 
     }
     console.log("data is"+data);
     try {

@@ -425,7 +425,7 @@ if(matchPassword){
     expiresIn:process.env.TOKEN_EXP
   } );
 
-  const options={expires:new Date(Date.now()+process.env.COOKIE_EXP*24*60*60*1000)}                                        //milisec
+  const options={expires:new Date(Date.now()+process.env.COOKIE_EXP*24*60*60*1000), secure: false}                                        //milisec
   res.status(200).cookie('authToken', token, options).json({
     successMessage:"Your Login Successful",token
   })

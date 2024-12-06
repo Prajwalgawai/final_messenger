@@ -9,9 +9,12 @@ dotenv.config({
 // const {nodemailer}=pkg;
 
 export const  authMiddleware = async(req,res,next) => {
-     const {authToken} = req.cookies;
+     const authToken = req.cookies.authToken;
+
+     console.log("token is"+req.cookies.authToken);
+
      if(authToken){
-          const deCodeToken = await jwt.verify(authToken,process.env.SECRET);
+          const deCodeToken = jwt.verify(authToken,process.env.SECRET);
           req.myId = deCodeToken.id;
           next();
      }else{

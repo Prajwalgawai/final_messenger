@@ -344,7 +344,8 @@ const{
      message
 } =req.body
 
-const senderId=req.myId;
+let senderId=req.myId;
+console.log("sender id is "+senderName+" "+reseverId+" "+message);
 
 try{
 const insertMessage=await messageModel.create({
@@ -368,7 +369,7 @@ res.status(201).json({
 }catch(error){
 res.status(500).json({
      error:{
-          errorMessage:"Internal Server Error"
+          errorMessage:"Internal Server Error"+error
      }
 })
 }

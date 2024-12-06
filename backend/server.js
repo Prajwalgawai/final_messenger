@@ -1,6 +1,7 @@
 // const express = require('express');
 import express from "express";
 const app = express();
+app.use(cookieParser());
 import dotenv from 'dotenv';
 import cors from 'cors';  // Import the cors package
 
@@ -24,7 +25,7 @@ app.use(cors({
 
 
 app.use(bodyParser.json());
-app.use(cookieParser());
+
 app.use('/api/messenger',authRouter);  //here authRouter is file name where remaining url may present therefore using app.use here.
 app.use('/api/messenger',messengerRoute);
 
