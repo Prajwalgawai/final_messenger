@@ -350,6 +350,7 @@ else{
         expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
         httpsOnly:true,
         secure: true,
+        sameSite: 'None'
       
     };    
                                     //milisec
@@ -435,6 +436,7 @@ if(matchPassword){
     expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
     httpsOnly:true,
     secure: true,
+    sameSite: 'None'
     
 };    
   
@@ -540,6 +542,7 @@ fs.copyFile(files.iurl.filepath, newPath ,async(error)=>{
     expires: new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000), // Expiration
     httpsOnly:true,
     secure: true,
+    sameSite: 'None'
     
 };                                      //milisec
 res.status(201).cookie('authToken', token, options).json({
